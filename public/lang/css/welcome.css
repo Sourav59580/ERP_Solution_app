@@ -35,3 +35,7 @@
 .next-btn:hover{
     color: #848484;
 }
+.submit-btn{
+    background-color: #fc6201;
+    color: white;
+}
