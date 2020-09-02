@@ -31,12 +31,14 @@ Wap Erp Solutions
       </div>
 
       <div class="welcome-form p-4">
-        <form class="signup-form" autocomplete="off">
+        <form class="signup-form" autocomplete="off" action="/api/company" method="POST">
+        @csrf
+        <input name="erp_url" value="testing.com">
           <!-- start step 1 -->
           <div class="step-1">
             <div class="form-group mb-4 overflow-hidden">
               <label class="d-none">Company name</label>
-              <input type="text" name="company-name" class="form-control welcome-form-input rounded-0 required" placeholder="COMPANY NAME" />
+              <input type="text" name="company_name" class="form-control welcome-form-input rounded-0 required" placeholder="COMPANY NAME" />
             </div>
 
             <div class="form-group mb-4 overflow-hidden">
@@ -50,7 +52,7 @@ Wap Erp Solutions
 
             <div class="form-group mb-4 overflow-hidden">
               <label class="d-none">Email id</label>
-              <input type="email" name="email" class="form-control welcome-form-input rounded-0 required" placeholder="EMAIL ID" />
+              <input type="email" name="company_email" class="form-control welcome-form-input rounded-0 required" placeholder="EMAIL ID" />
             </div>
 
             <div class="form-group mb-4 overflow-hidden">
@@ -60,7 +62,7 @@ Wap Erp Solutions
 
             <div class="form-group mb-5 overflow-hidden">
               <label class="d-none">Founder Email Id</label>
-              <input type="email" name="founderemail" class="form-control welcome-form-input rounded-0 required" placeholder="FOUNDER EMAIL ID" />
+              <input type="email" name="founder_email" class="form-control welcome-form-input rounded-0 required" placeholder="FOUNDER EMAIL ID" />
             </div>
 
             <div class="form-group">
@@ -73,12 +75,12 @@ Wap Erp Solutions
           <div class="step-2 d-none">
             <div class="form-group mb-4 overflow-hidden">
               <label class="d-none">Contact number</label>
-              <input type="number" name="contactnumber" class="form-control welcome-form-input rounded-0 required" placeholder="CONTACT NUMBER" />
+              <input type="number" name="contact_number" class="form-control welcome-form-input rounded-0 required" placeholder="CONTACT NUMBER" />
             </div>
 
             <div class="form-group mb-4 overflow-hidden">
               <label class="d-none">Street Address</label>
-              <input type="text" name="streetaddress" class="form-control welcome-form-input rounded-0 required" placeholder="STREET ADDRESS" />
+              <input type="text" name="street_address" class="form-control welcome-form-input rounded-0 required" placeholder="STREET ADDRESS" />
             </div>
 
             <div class="form-group mb-4 overflow-hidden">
@@ -118,23 +120,23 @@ Wap Erp Solutions
             </div>
             <div class="form-group mb-5 overflow-hidden">
               <label class="d-none">Ofice start at</label>
-              <input type="time" name="start-at" class="form-control welcome-form-input rounded-0 required" />
+              <input type="time" name="office_starts_at" class="form-control welcome-form-input rounded-0 required" />
             </div>
             <div class="form-group mb-5 overflow-hidden">
               <label class="d-none">Ofice ends at</label>
-              <input type="time" name="end-at" class="form-control welcome-form-input rounded-0 required" />
+              <input type="time" name="office_ends_at" class="form-control welcome-form-input rounded-0 required" />
             </div>
             <div class="form-group mb-5 overflow-hidden">
               <label class="d-none">Established in</label>
-              <input type="date" name="est-at" class="form-control welcome-form-input rounded-0 required" />
+              <input type="date" name="company_estd" class="form-control welcome-form-input rounded-0 required" />
             </div>
             <div class="form-group mb-5 overflow-hidden">
               <label class="d-none">Facebook page url</label>
-              <input type="url" name="facebook" class="form-control welcome-form-input rounded-0 url" placeholder="FACEBOOK PAGE URL" />
+              <input type="url" name="facebook_url" class="form-control welcome-form-input rounded-0 url" placeholder="FACEBOOK PAGE URL" />
             </div>
             <div class="form-group mb-5 overflow-hidden">
               <label class="d-none">Twitter page url</label>
-              <input type="url" name="twitter" class="form-control welcome-form-input rounded-0 url" placeholder="TWITTER PAGE URL" />
+              <input type="url" name="twitter_url" class="form-control welcome-form-input rounded-0 url" placeholder="TWITTER PAGE URL" />
             </div>
             <div class="form-group">
               <button type="submit" class="btn float-left back-btn step-3-back-btn"><i class="fa fa-angle-double-left"> </i> BACK </button>
@@ -149,7 +151,7 @@ Wap Erp Solutions
           <div class="step-4 d-none">
             <div class="form-group mb-5 overflow-hidden">
               <label class="d-none">What's app number</label>
-              <input type="number" name="whats-app" class="form-control welcome-form-input rounded-0" placeholder="WHATS APP NUMBER" />
+              <input type="number" name="whatsApp" class="form-control welcome-form-input rounded-0" placeholder="WHATS APP NUMBER" />
             </div>
             <div class="form-group mb-5 overflow-hidden">
               <label>Category</label>
