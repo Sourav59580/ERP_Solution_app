@@ -13,6 +13,8 @@ class company extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public $data;
     public function index()
     {
         //
@@ -37,7 +39,7 @@ class company extends Controller
     public function store(Request $request)
     {
         Company_registration::create($request->all());
-        return response()->view('congrats',array("notice"=>"Record inserted !"))->header('Content-Type',"application/json")->setStatusCode(201);
+        return response()->view('congrats',array("notice"=>"We have sent your url and password to your email"))->header('Content-Type',"text/html")->setStatusCode(201);
     }
 
     /**
@@ -48,7 +50,14 @@ class company extends Controller
      */
     public function show($id)
     {
-        //
+       $this->data = Company_registration::where("company_name",$id)->get();
+
+       if(count($this->data) !=0){
+         return response(array("notice","Data found !"),200)->header("Content-Type","application/json");  
+         
+       }else{
+        return response(array("notice","Data not found !"),404)->header("Content-Type","application/json");  
+       }
     }
 
     /**

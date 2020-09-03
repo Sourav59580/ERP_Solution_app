@@ -26,7 +26,7 @@
 
 </head>
 
-<body>
+<body token="{{csrf_token()}}">
 
   @yield("content")
 

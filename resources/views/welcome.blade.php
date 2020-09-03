@@ -33,36 +33,39 @@ Wap Erp Solutions
       <div class="welcome-form p-4">
         <form class="signup-form" autocomplete="off" action="/api/company" method="POST">
         @csrf
-        <input name="erp_url" value="testing.com">
           <!-- start step 1 -->
           <div class="step-1">
             <div class="form-group mb-4 overflow-hidden">
               <label class="d-none">Company name</label>
-              <input type="text" name="company_name" class="form-control welcome-form-input rounded-0 required" placeholder="COMPANY NAME" />
+              <input type="text" name="company_name" class="form-control welcome-form-input rounded-0 required company-name" placeholder="COMPANY NAME" maxlength="80" />
+            </div>
+            <div class="d-none form-group mb-4 overflow-hidden">
+              <label class="d-none">Erp url</label>
+              <input type="url" name="erp_url" class="form-control welcome-form-input rounded-0 erp_url" placeholder="ERP URL" maxlength="80" />
             </div>
 
             <div class="form-group mb-4 overflow-hidden">
               <label class="d-none">Tagline</label>
-              <input type="text" name="tagline" class="form-control welcome-form-input rounded-0" placeholder="TAGLINE" />
+              <input type="text" name="tagline" class="form-control welcome-form-input rounded-0" placeholder="TAGLINE" maxlength="95"/>
             </div>
             <div class="form-group mb-4 overflow-hidden">
               <label class="d-none">Website</label>
-              <input type="website" name="website" class="form-control welcome-form-input rounded-0 url" placeholder="WEBSITE" />
+              <input type="website" name="website" class="form-control welcome-form-input rounded-0 url" placeholder="WEBSITE" maxlength="95"/>
             </div>
 
             <div class="form-group mb-4 overflow-hidden">
               <label class="d-none">Email id</label>
-              <input type="email" name="company_email" class="form-control welcome-form-input rounded-0 required" placeholder="EMAIL ID" />
+              <input type="email" name="company_email" class="form-control welcome-form-input rounded-0 required" placeholder="EMAIL ID" maxlength="95"/>
             </div>
 
             <div class="form-group mb-4 overflow-hidden">
               <label class="d-none">Founder</label>
-              <input type="text" name="founder" class="form-control welcome-form-input rounded-0 required" placeholder="FOUNDER" />
+              <input type="text" name="founder" class="form-control welcome-form-input rounded-0 required" placeholder="FOUNDER" maxlength="80"/>
             </div>
 
             <div class="form-group mb-5 overflow-hidden">
               <label class="d-none">Founder Email Id</label>
-              <input type="email" name="founder_email" class="form-control welcome-form-input rounded-0 required" placeholder="FOUNDER EMAIL ID" />
+              <input type="email" name="founder_email" class="form-control welcome-form-input rounded-0 required" placeholder="FOUNDER EMAIL ID" maxlength="95"/>
             </div>
 
             <div class="form-group">
@@ -85,17 +88,17 @@ Wap Erp Solutions
 
             <div class="form-group mb-4 overflow-hidden">
               <label class="d-none">City</label>
-              <input type="text" name="city" class="form-control welcome-form-input rounded-0 required" placeholder="CITY" />
+              <input type="text" name="city" class="form-control welcome-form-input rounded-0 required" placeholder="CITY" maxlength="80" />
             </div>
 
             <div class="form-group mb-4 overflow-hidden">
               <label class="d-none">State</label>
-              <input type="text" name="state" class="form-control welcome-form-input rounded-0 required" placeholder="STATE" />
+              <input type="text" name="state" class="form-control welcome-form-input rounded-0 required" placeholder="STATE" maxlength="80"/>
             </div>
 
             <div class="form-group mb-4 overflow-hidden">
               <label class="d-none">Country</label>
-              <input type="text" name="country" class="form-control welcome-form-input rounded-0 required" placeholder="COUNTRY" />
+              <input type="text" name="country" class="form-control welcome-form-input rounded-0 required" placeholder="COUNTRY" maxlength="80"/>
             </div>
 
             <div class="form-group mb-5 overflow-hidden">
@@ -116,7 +119,7 @@ Wap Erp Solutions
           <div class="step-3 d-none">
             <div class="form-group mb-5 overflow-hidden">
               <label class="d-none">GSTIN</label>
-              <input type="text" name="gstin" class="form-control welcome-form-input rounded-0" placeholder="GSTIN" />
+              <input type="text" name="gstin" class="form-control welcome-form-input rounded-0" placeholder="GSTIN" maxlength="15"/>
             </div>
             <div class="form-group mb-5 overflow-hidden">
               <label class="d-none">Ofice start at</label>
