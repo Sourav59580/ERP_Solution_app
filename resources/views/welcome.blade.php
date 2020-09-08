@@ -31,7 +31,7 @@ Wap Erp Solutions
       </div>
 
       <div class="welcome-form p-4">
-        <form class="signup-form" autocomplete="off" action="/api/company" method="POST">
+        <form class="signup-form" autocomplete="on" action="/api/company" method="POST">
         @csrf
           <!-- start step 1 -->
           <div class="step-1">
@@ -42,6 +42,10 @@ Wap Erp Solutions
             <div class="d-none form-group mb-4 overflow-hidden">
               <label class="d-none">Erp url</label>
               <input type="url" name="erp_url" class="form-control welcome-form-input rounded-0 erp_url" placeholder="ERP URL" maxlength="80" />
+            </div>
+            <div class="form-group mb-4 overflow-hidden d-none">
+              <label class="d-none">Password</label>
+              <input type="password" name="password" class="form-control welcome-form-input rounded-0 password" placeholder="PASSWORD" maxlength="10" />
             </div>
 
             <div class="form-group mb-4 overflow-hidden">

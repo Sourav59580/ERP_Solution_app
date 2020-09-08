@@ -15,6 +15,7 @@ class company extends Controller
      */
 
      public $data;
+     public $password;
     public function index()
     {
         //
@@ -38,8 +39,12 @@ class company extends Controller
      */
     public function store(Request $request)
     {
-        Company_registration::create($request->all());
-        return response()->view('congrats',array("notice"=>"We have sent your url and password to your email"))->header('Content-Type',"text/html")->setStatusCode(201);
+       $this->data = $request->all();
+       $this->password = array("password"=>bcrypt($this->data['password']));
+       $this->data = array_replace($this->data,$this->password);
+
+       Company_registration::create($this->data);
+       return response()->view('congrats',array("notice"=>"We have sent your url and password to your email"))->header('Content-Type',"text/html")->setStatusCode(201);
     }
 
     /**
